@@ -32,4 +32,4 @@ jobs:
         with:
           pattern: modules-*
           merge-multiple: true
-      - run: find . -t d | sort
+      - run: find . -d | sort
