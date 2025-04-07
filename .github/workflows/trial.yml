@@ -17,11 +17,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.13
-      - run: pip install ${{ matrix.module }} -t python/${{ matrix.module }}
+      - run: pip install ${{ matrix.module }} -t dist/python/${{ matrix.module }}
       - uses: actions/upload-artifact@v4
         with:
           name: modules-${{ matrix.index }}
-          path: python
+          path: dist 
 
   check:
     runs-on: ubuntu-latest
